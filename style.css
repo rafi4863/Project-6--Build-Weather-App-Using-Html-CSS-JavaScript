@@ -94,7 +94,6 @@
 }
 
 
-
 #weatherInfo{
     width: 350px;
     margin: 30px auto;
@@ -102,4 +101,152 @@
     line-height: 40px;
     color: white;
     margin-top: 0px;
+}
+
+
+/* for mobile responsive css code */
+
+/* ===== Mobile Responsive Section ===== */
+
+/* Tablets & medium screens */
+@media (max-width: 1024px) {
+    .parentdiv {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 50px;
+        padding: 15px;
+        align-items: center;
+        height: auto;
+    }
+
+    .div-one, .div-two {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #searchCity {
+        width: 80%;
+        margin-left: 0;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #searchBtn {
+        width: 50%;
+        margin: 10px auto;
+        display: block;
+        font-size: 18px;
+    }
+
+    #cityName {
+        font-size: 22px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #weatherInfo {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+/* Mobile devices (phones) */
+@media (max-width: 768px) {
+    #searchCity {
+        width: 90%;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    #searchBtn {
+        width: 80%;
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    #cityName {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #weatherInfo h1 {
+        font-size: 45px !important;
+    }
+
+    #weatherInfo h3 {
+        font-size: 16px;
+    }
+
+    #notification {
+        font-size: 18px;
+    }
+
+    .div-one {
+        height: 150px;
+    }
+}
+
+/* Very small screens (extra small phones) */
+
+@media (max-width: 480px) {
+    .div-one {
+        height: 120px;
+    }
+
+    #cityName {
+        font-size: 18px;
+    }
+
+    #weatherInfo h1 {
+        font-size: 35px !important;
+    }
+
+    #weatherInfo h3 {
+        font-size: 14px;
+    }
+
+    #searchCity {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    #searchBtn {
+        width: 90%;
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    #notification {
+        font-size: 16px;
+    }
+}
+
+
+.div-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#searchCity, #searchBtn {
+    margin: 10px 0; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #searchCity {
+        width: 70%;
+    }
+    #searchBtn {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #searchCity {
+        width: 90%;
+    }
+    #searchBtn {
+        width: 70%;
+    }
 }
