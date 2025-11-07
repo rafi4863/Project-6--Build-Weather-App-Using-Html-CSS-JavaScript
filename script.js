@@ -9,9 +9,6 @@ const getWeather = () => {
     .then(res => res.json())
     .then(data => {
         
-       const weatherInfo = document.getElementById('weatherInfo');
-       const cityName = document.getElementById('cityName'); 
-        
        const description = data.weather[0].description;
        const temperature = data.main.temp;
        const humidity = data.main.humidity;
@@ -27,6 +24,15 @@ const getWeather = () => {
             <h3> Wind Speed : ${windSpeed} m/s </h3>
        `;
     })
+    .catch(error => {
+        console.error('Opps!, Sorry', error);
 
+        const cityName = document.getElementById('cityName');
+        const weatherInfo = document.getElementById('weatherInfo');
 
+         cityName.innerText = '';
+         weatherInfo.textContent = 'City Not Found';
+
+        cityInput.value = "";
+    })
 }
