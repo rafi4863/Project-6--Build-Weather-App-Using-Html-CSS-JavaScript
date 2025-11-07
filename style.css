@@ -104,6 +104,9 @@
 }
 
 
+
+
+
 /* for mobile responsive css code */
 
 /* ===== Mobile Responsive Section ===== */
@@ -126,7 +129,7 @@
 
     #searchCity {
         width: 80%;
-        margin-left: 0;
+        margin-left: 20px;
         display: block;
         margin-bottom: 10px;
     }
@@ -156,6 +159,7 @@
         width: 90%;
         font-size: 16px;
         padding-left: 10px;
+        
     }
 
     #searchBtn {

@@ -43,7 +43,8 @@ const getWeather = () => {
 
         cityInput.value = "";
     })
-}
+};
+
 
     const cityInputField = document.getElementById('searchCity');
     cityInputField.addEventListener('keypress', function(event) {
