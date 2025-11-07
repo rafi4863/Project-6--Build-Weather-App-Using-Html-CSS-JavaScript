@@ -29,10 +29,25 @@ const getWeather = () => {
 
         const cityName = document.getElementById('cityName');
         const weatherInfo = document.getElementById('weatherInfo');
+        const notification = document.getElementById('notification');
 
          cityName.innerText = '';
-         weatherInfo.textContent = 'City Not Found';
+         weatherInfo.innerHTML = '';
+
+         notification.innerText = 'City Not Found! Please enter a valid city name.';
+         notification.classList.add('show');
+
+          setTimeout(() => {
+             notification.classList.remove('show');
+           }, 3000);
 
         cityInput.value = "";
     })
 }
+
+    const cityInputField = document.getElementById('searchCity');
+    cityInputField.addEventListener('keypress', function(event) {
+        if(event.key === 'Enter'){
+            getWeather();
+        }
+    });
